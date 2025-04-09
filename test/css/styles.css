@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Nécessaire pour le pseudo-élément */
+}
+
+/* Ajout d'un pseudo-élément pour l'arrière-plan */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/scene/concert.png'); /* Ajustez le chemin si nécessaire */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Opacité appliquée uniquement à l'image de fond */
+    z-index: -1; /* Place l'image derrière tout le contenu */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.clicker {
+    width: 200px;
+    text-align: center;
+    margin-right: 500px; /* Espace entre le clicker et la scène */
+}
+
+#clicker-guitare {
+    width: 550px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#clicker-guitare:active {
+    transform: scale(0.95); /* Effet de "pression" au clic */
+}
+
+#score {
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.scene {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Place l'image de la scène au-dessus de l'arrière-plan du body */
+}
+
+#chanteuse {
+    position: absolute;
+    left: 300px;
+    top: 70%; /* Position ajustée précédemment */
+    transform: translateY(-50%);
+    width: 100px;
+    transition: transform 0.1s;
+    z-index: 2; /* Place la chanteuse au-dessus de l'image de la scène */
+}
+
+#batteur {
+    position: absolute;
+    left: 500px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 100px;
+    transition: transform 0.1s;
+    z-index: 2;
+}
+
+#clavieriste {
+    position: absolute;
+    left: 400px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 100px;
+    transition: transform 0.1s;
+    z-index: 2;
+}
+
+#guitariste {
+    position: absolute;
+    left: 20px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 100px;
+    transition: transform 0.1s;
+    z-index: 2;
+}
+
+/* Styles pour les spectateurs (1 à 7) */
+#spectateur1 {
+    position: absolute;
+    left: 50px;
+    top: 90%; /* Position en bas de la scène */
+    transform: translateY(-50%);
+    width: 50px; /* Taille plus petite que les musiciens */
+    z-index: 3; /* Au-dessus des musiciens */
+}
+
+#spectateur2 {
+    position: absolute;
+    left: 150px;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 50px;
+    z-index: 3;
+}
+
+#spectateur3 {
+    position: absolute;
+    left: 250px;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 50px;
+    z-index: 3;
+}
+
+#spectateur4 {
+    position: absolute;
+    left: 350px;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 50px;
+    z-index: 3;
+}
+
+#spectateur5 {
+    position: absolute;
+    left: 450px;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 50px;
+    z-index: 3;
+}
+
+#spectateur6 {
+    position: absolute;
+    left: 550px;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 50px;
+    z-index: 3;
+}
+
+#spectateur7 {
+    position: absolute;
+    left: 650px;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 50px;
+    z-index: 3;
+}
