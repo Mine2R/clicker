@@ -39,7 +39,6 @@ const guitaristeFrames = [
     "assets/guitariste/guitaristeframe3.png"
 ];
 
-// Frames pour les spectateurs (3 frames chacun)
 const spectateur1Frames = [
     "assets/pnj1/pnj1f1.png",
     "assets/pnj1/pnj1f2.png",
@@ -49,7 +48,7 @@ const spectateur1Frames = [
 const spectateur2Frames = [
     "assets/pnj2/pnj2f1.png",
     "assets/pnj2/pnj2f2.png",
-    "assets/pnj2/pnj2f3.png" // Chemin corrigé
+    "assets/pnj2/pnj2f3.png"
 ];
 
 const spectateur3Frames = [
@@ -85,11 +84,9 @@ const spectateur7Frames = [
 let currentFrame = 0;
 let positionOffset = 0;
 let goingUp = true;
-let points = 0; // Variable pour stocker les points
+let points = 0; 
 
-// Animation de la scène
 function animateBand() {
-    // Animation des musiciens
     chanteuse.src = chanteuseFrames[currentFrame];
     batteur.src = batteurFrames[currentFrame];
     clavieriste.src = clavieristeFrames[currentFrame];
