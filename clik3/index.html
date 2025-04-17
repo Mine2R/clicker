@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guitar Clicker + Concert</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="main-container">
+    <!-- Clicker guitare à gauche -->
+    <div class="clicker-section">
+      <h1>Guitar Clicker</h1>
+      <h2>Notes: <span id="cookie-count">0</span></h2>
+      <img id="cookie" src="./assets/guitare.png" alt="Cookie">
+    </div>
+
+    <!-- Scène au centre -->
+    <div class="scene">
+      <img src="assets/scene/concert.png" alt="Scène" class="background" />
+      <img src="assets/chanteuse/chanteusef1.png" alt="Chanteuse" id="chanteuse" />
+      <img src="assets/batteur/batteurf1.png" alt="Batteur" id="batteur" />
+      <img src="assets/clavieriste/clavieristef1.png" alt="Claviériste" id="clavieriste" />
+      <img src="assets/guitariste/guitaristef1.png" alt="Guitariste" id="guitariste" />
+      <img src="assets/pnj1/pnj1f1.png" alt="Spectateur 1" id="spectateur1" />
+      <img src="assets/pnj2/pnj2f1.png" alt="Spectateur 2" id="spectateur2" />
+      <img src="assets/pnj3/pnj3f1.png" alt="Spectateur 3" id="spectateur3" />
+      <img src="assets/pnj4/pnj4f1.png" alt="Spectateur 4" id="spectateur4" />
+      <img src="assets/pnj5/pnj5f1.png" alt="Spectateur 5" id="spectateur5" />
+      <img src="assets/pnj6/pnj6f1.png" alt="Spectateur 6" id="spectateur6" />
+      <img src="assets/pnj7/pnj7f1.png" alt="Spectateur 7" id="spectateur7" />
+    </div>
+
+    <!-- Boutique à droite -->
+    <div class="shop-section">
+      <h3>Boutique</h3>
+      <div id="shop-items"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="./js/script.js"></script>
+  <script type="module" src="./js/clicker.js"></script>
+  <script type="module" src="./js/init.js"></script>
+  <script type="module" src="./js/shop.js"></script>
+</body>
+</html>

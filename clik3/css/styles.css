@@ -1,0 +1,160 @@
+/* === GLOBAL === */
+body {
+    margin: 0;
+    background-color: #111;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden; /* ✅ empêche le scroll horizontal */
+}
+
+/* === FOND D'ÉCRAN === */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/scene/concert.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* === LAYOUT PRINCIPAL === */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap; /* pour mobile */
+}
+
+/* CLICKER À GAUCHE */
+.clicker-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+#cookie {
+    width: 200px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#cookie:hover {
+    transform: scale(1.05);
+}
+
+/* SCÈNE CENTRALE - ✅ réduite */
+.scene {
+    position: relative;
+    width: 700px; /* ⬅️ réduction ici */
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    background-color: rgba(0, 0, 0, 0.4);
+    flex-shrink: 1;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* MUSICIENS */
+#chanteuse,
+#batteur,
+#clavieriste,
+#guitariste {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 80px;
+    transition: transform 0.1s;
+    z-index: 2;
+}
+
+#chanteuse { left: 250px; }
+#batteur { left: 380px; }
+#clavieriste { left: 310px; }
+#guitariste { left: 10px; }
+
+/* SPECTATEURS */
+#spectateur1, #spectateur2, #spectateur3,
+#spectateur4, #spectateur5, #spectateur6, #spectateur7 {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 3;
+}
+
+#spectateur1 { left: 30px; }
+#spectateur2 { left: 100px; }
+#spectateur3 { left: 170px; }
+#spectateur4 { left: 240px; }
+#spectateur5 { left: 310px; }
+#spectateur6 { left: 380px; }
+#spectateur7 { left: 450px; }
+
+/* BOUTIQUE À DROITE */
+.shop-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+#shop-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.shop-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+.shop-item button {
+    cursor: pointer;
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.shop-item button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

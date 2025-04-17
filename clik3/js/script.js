@@ -39,6 +39,7 @@ const guitaristeFrames = [
     "assets/guitariste/guitaristeframe3.png"
 ];
 
+// Frames pour les spectateurs (3 frames chacun)
 const spectateur1Frames = [
     "assets/pnj1/pnj1f1.png",
     "assets/pnj1/pnj1f2.png",
@@ -48,45 +49,48 @@ const spectateur1Frames = [
 const spectateur2Frames = [
     "assets/pnj2/pnj2f1.png",
     "assets/pnj2/pnj2f2.png",
-    "assets/pnj2/pnj2f3.png"
+    "assets/pnj2/pnj2f3.png" // Chemin corrigé
 ];
 
 const spectateur3Frames = [
-    "assets/pnj1/pnj3f1.png",
-    "assets/10/pnj1/pnj3f2.png",
-    "assets/10/pnj1/pnj3f3.png"
+    "assets/pnj3/pnj3f1.png",
+    "assets/pnj3/pnj3f2.png",
+    "assets/pnj3/pnj3f3.png"
 ];
 
 const spectateur4Frames = [
-    "assets/10/pnj1/pnj4f1.png",
-    "assets/10/pnj1/pnj4f2.png",
-    "assets/10/pnj1/pnj4f3.png"
+    "assets/pnj4/pnj4f1.png",
+    "assets/pnj4/pnj4f2.png",
+    "assets/pnj4/pnj4f3.png"
 ];
 
 const spectateur5Frames = [
-    "assets/10/pnj1/pnj5f1.png",
-    "assets/10/pnj1/pnj5f2.png",
-    "assets/10/pnj1/pnj5f3.png"
+    "assets/pnj5/pnj5f1.png",
+    "assets/pnj5/pnj5f2.png",
+    "assets/pnj5/pnj5f3.png"
 ];
 
 const spectateur6Frames = [
-    "assets/10/pnj1/pnj6f1.png",
-    "assets/10/pnj1/pnj6f2.png",
-    "assets/10/pnj1/pnj6f3.png"
+    "assets/pnj6/pnj6f1.png",
+    "assets/pnj6/pnj6f2.png",
+    "assets/pnj6/pnj6f3.png"
 ];
 
 const spectateur7Frames = [
-    "assets/10/pnj1/pnj7f1.png",
-    "assets/10/pnj1/pnj7f2.png",
-    "assets/10/pnj1/pnj7f3.png"
+    "assets/pnj7/pnj7f1.png",
+    "assets/pnj7/pnj7f2.png",
+    "assets/pnj7/pnj7f3.png"
 ];
+
 
 let currentFrame = 0;
 let positionOffset = 0;
 let goingUp = true;
-let points = 0; 
+let points = 0; // Variable pour stocker les points
 
+// Animation de la scène
 function animateBand() {
+    // Animation des musiciens
     chanteuse.src = chanteuseFrames[currentFrame];
     batteur.src = batteurFrames[currentFrame];
     clavieriste.src = clavieristeFrames[currentFrame];
