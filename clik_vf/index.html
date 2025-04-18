@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="main-container">
-    <!-- Clicker guitare à gauche -->
+    <!-- Clicker guitare -->
     <div class="clicker-section">
       <h1>Guitar Clicker</h1>
       <h2>Notes: <span id="cookie-count">0</span></h2>
@@ -29,19 +29,32 @@
       <img src="assets/pnj5/pnj5f1.png" alt="Spectateur 5" id="spectateur5" />
       <img src="assets/pnj6/pnj6f1.png" alt="Spectateur 6" id="spectateur6" />
       <img src="assets/pnj7/pnj7f1.png" alt="Spectateur 7" id="spectateur7" />
+      <img src="assets/pnj8/pnj8f1.png" alt="Spectateur 8" id="spectateur8" />
+      <img src="assets/pnj9/pnj9f1.png" alt="Spectateur 9" id="spectateur9" />
+      <img src="assets/pnj10/pnj10f1.png" alt="Spectateur 10" id="spectateur10" />
+
     </div>
 
-    <!-- Boutique à droite -->
+    <!-- Boutique-->
     <div class="shop-section">
       <h3>Boutique</h3>
       <div id="shop-items"></div>
+      <button id="reset-game" class="reset-button"> Réinitialiser le jeu</button>
+
+
     </div>
   </div>
+   <!-- Audio element for guitar click sound -->
+   <audio id="guitar-sound" src="./assets/sounds/guit.mp3"></audio>
+    <!-- Bonus guitare random -->
+   <img id="bonus-guitar" src="assets/guitare.png" alt="Guitare Bonus" style="display: none;" />
+
 
   <!-- JS -->
-  <script src="./js/script.js"></script>
   <script type="module" src="./js/clicker.js"></script>
   <script type="module" src="./js/init.js"></script>
   <script type="module" src="./js/shop.js"></script>
+  <script type="module" src="./js/script.js"></script>
+  
 </body>
 </html>

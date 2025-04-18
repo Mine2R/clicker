@@ -1,0 +1,293 @@
+/* === GLOBAL === */
+body {
+    margin: 0;
+    background-color: #111;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* === FOND D'ÉCRAN === */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/scene/concert.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* === LAYOUT PRINCIPAL === */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+/* === CLICKER À GAUCHE === */
+.clicker-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 196, 0, 0.3);
+    text-align: center;
+    width: 250px;
+    flex-shrink: 0;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.clicker-section h1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ff9e0b8d;;
+    text-shadow: 0 0 5px #ff9e0b8d;;
+}
+
+.clicker-section h2 {
+    font-size: 12px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    text-shadow: 0 0 3px #ffcc00;
+}
+
+/* Guitare cliquable */
+#cookie {
+    width: 160px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease, filter 0.2s ease;
+    image-rendering: pixelated;
+}
+
+#cookie:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+
+/* SCÈNE CENTRALE*/
+.scene {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    background-color: rgba(0, 0, 0, 0.4);
+    flex-shrink: 1;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* MUSICIENS */
+#chanteuse,
+#batteur,
+#clavieriste,
+#guitariste {
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%);
+    width: 100px;
+    transition: transform 0.1s;
+    z-index: 2;
+}
+
+#guitariste { left: 150px; }
+#clavieriste { left: 250px; }
+#chanteuse { left: 350px; }
+#batteur { left: 480px; }
+
+
+/* SPECTATEURS */
+#spectateur1, #spectateur2, #spectateur3,
+#spectateur4, #spectateur5, #spectateur6,
+#spectateur7, #spectateur8, #spectateur9,
+#spectateur10 {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 110px;
+    z-index: 3;
+}
+
+
+#spectateur1 { left: 60px; }
+#spectateur2 { left: 140px; }
+#spectateur3 { left: 200px; }
+#spectateur4 { left: 260px; }
+#spectateur5 { left: 320px; }
+#spectateur6 { left: 380px; }
+#spectateur7 { left: 450px; }
+#spectateur9 { left: 520px; }
+#spectateur10 { left: 600px; }
+
+
+
+
+/* === BOUTIQUE À DROITE === */
+.shop-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 250px;
+    flex-shrink: 0;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.shop-section h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+}
+
+/* Liste des items */
+#shop-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Un item de shop */
+.shop-item {
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.1s ease;
+}
+
+.shop-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 8px #ffcc00;
+}
+
+/* Titre de l’item */
+.shop-item h4 {
+    margin: 5px 0;
+    font-size: 10px;
+    color: #ffcc00;
+}
+
+/* Description */
+.shop-item p {
+    margin: 2px 0;
+    font-size: 10px;
+    color: #ccc;
+}
+
+/* Bouton acheter */
+.shop-item button {
+    cursor: pointer;
+    padding: 4px 8px;
+    background-color: #ff9e0b8d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-top: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.shop-item button:hover {
+    background-color:#7a50138d;;
+}
+
+.shop-item button:disabled {
+    background-color: #555;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.reset-button {
+    margin-top: 20px;
+    padding: 8px 12px;
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #ff3333;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+
+#bonus-guitar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+    animation: pulseBonus 1s infinite;
+}
+
+
+@media (max-width: 768px) {
+    .scene {
+      display: none;
+    }
+  
+    .main-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .clicker-section,
+    .shop-section {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    #cookie {
+      width: 130px;
+    }
+  
+    .shop-item {
+      font-size: 11px;
+    }
+  
+    .shop-item h4,
+    .shop-item p,
+    .shop-item button {
+      font-size: 11px;
+    }
+  }
