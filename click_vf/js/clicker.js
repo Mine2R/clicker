@@ -1,3 +1,7 @@
+
+
+
+
 let cookies = 0;
 const cookiesPerClick = { value: 1 }; // Use object to allow mutation
 const autoClickers = { value: 0 }; // Use object to allow mutation
@@ -100,3 +104,13 @@ setInterval(() => {
 }, 1000);
 
 export { getCookies, setCookies, cookiesPerClick, autoClickers, baseAutoClicker, updateCookieCount, loadGame, saveGame };
+
+
+
+if (localStorage.getItem("resetGameNow") === "true") {
+    localStorage.clear();
+
+    const display = document.getElementById("cookie-count");
+    if (display) display.textContent = "0";
+
+  }

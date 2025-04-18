@@ -23,12 +23,12 @@ window.addEventListener("DOMContentLoaded", () => {
     const resetBtn = document.getElementById("reset-game");
     if (resetBtn) {
       resetBtn.addEventListener("click", () => {
-        const confirmation = confirm("Es-tu sûr de vouloir réinitialiser le jeu ?");
+        const confirmation = confirm("Réinitialiser complètement le jeu ?");
         if (confirmation) {
-          localStorage.clear();
+          // un flag de reset
+          localStorage.setItem("resetGameNow", "true");
           location.reload();
         }
       });
     }
-  });
-  
+  });  
